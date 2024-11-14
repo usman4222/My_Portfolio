@@ -50,16 +50,16 @@ const Clients = () => {
   const moveForward = (index) => {
     if (testimonialRef.current !== null) {
       testimonialsArr.length == index
-        ? testimonialRef.current.swiper.slideTo(0) // if current slide is last then move to first slide
-        : testimonialRef.current.swiper.slideTo(index); // move to next slide
+        ? testimonialRef.current.swiper.slideTo(0) 
+        : testimonialRef.current.swiper.slideTo(index); 
     }
   };
 
   const moveBack = (index) => {
     if (testimonialRef.current !== null) {
       index < 0
-        ? testimonialRef.current.swiper.slideTo(testimonialsArr.length) // if current slide is first then move to lasat slide
-        : testimonialRef.current.swiper.slideTo(index); // move to previous slide
+        ? testimonialRef.current.swiper.slideTo(testimonialsArr.length) 
+        : testimonialRef.current.swiper.slideTo(index); 
     }
   };
 

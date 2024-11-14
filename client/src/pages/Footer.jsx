@@ -7,15 +7,14 @@ import axios from "axios";
 import { BACKEND_BASE_URL } from "../constant";
 
 const Footer = ({ setOpenOTPModal, setOtpFormType }) => {
-  //////////////////////////////////////// VARIABLES //////////////////////////////////////////////
+
   const sectionRef = useRef();
   const initialState = { email: "",};
   const [validationMessage, setValidationMessage] = useState(initialState);
-  //////////////////////////////////////// STATES //////////////////////////////////////////////
+
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
 
-  //////////////////////////////////////// USE EFFECT //////////////////////////////////////////////
   useEffect(() => {
     const updateHeight = () => {
       const heightInVh =
@@ -30,7 +29,6 @@ const Footer = ({ setOpenOTPModal, setOtpFormType }) => {
     };
   }, []);
 
-  //////////////////////////////////////// FUNCTIONS //////////////////////////////////////////////
   const handleChange = (e) => {
     setEmail(e.target.value);
   };
@@ -167,10 +165,10 @@ const links = [
     title: "Home",
     link: "home",
   },
-  {
-    title: "About",
-    link: "about",
-  },
+  // {
+  //   title: "About",
+  //   link: "about",
+  // },
   {
     title: "Services",
     link: "services",
@@ -179,10 +177,10 @@ const links = [
     title: "Work",
     link: "work",
   },
-  {
-    title: "Clients",
-    link: "clients",
-  },
+  // {
+  //   title: "Clients",
+  //   link: "clients",
+  // },
   {
     title: "Contact",
     link: "contact",

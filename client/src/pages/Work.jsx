@@ -27,13 +27,11 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSpring } from "react-spring";
 import VanillaTilt from "vanilla-tilt";
 
 const Work = () => {
-  //////////////////////////////////// VARIABLES ///////////////////////////////////////////////
   const imageContainerRef = useRef(null);
   const sectionRef = useRef();
   const tiltRefs = Array.from({ length: initialProjects.length }, () =>
@@ -60,7 +58,6 @@ const Work = () => {
     { label: "Small", value: "small" },
   ];
 
-  //////////////////////////////////// STATE ///////////////////////////////////////////////
   const [showImageModal, setShowImageModal] = useState(false);
   const [fullScreen, setFullScreen] = useState(false);
   const [currentImage, setCurrentImage] = useState({});
@@ -70,7 +67,6 @@ const Work = () => {
   const [sizeFilters, setSizeFilters] = useState(["all"]);
   const [techFilters, setTechFilters] = useState(["all"]);
 
-  //////////////////////////////////////// USE EFFECT //////////////////////////////////////////////
   useEffect(() => {
     const updateHeight = () => {
       const heightInVh =
@@ -90,7 +86,6 @@ const Work = () => {
     window.addEventListener("scroll", updateHeight);
     window.addEventListener("resize", updateHeight);
 
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", updateHeight);
       window.removeEventListener("resize", updateHeight);
@@ -110,7 +105,7 @@ const Work = () => {
         });
 
         return () => {
-          circleRef.current?.vanillaTilt?.destroy(); // Cleanup on component unmount
+          circleRef.current?.vanillaTilt?.destroy();
         };
       }
     });
@@ -121,12 +116,12 @@ const Work = () => {
         (techFilters.includes("all") || techFilters.length === 0) &&
         (sizeFilters.includes("all") || sizeFilters.length === 0)
       ) {
-        // No filters, return initial projects as is
+
         techFilters.length === 0 && setTechFilters(["all"]);
         sizeFilters.length === 0 && setSizeFilters(["all"]);
         return initialProjects;
       } else {
-        // Apply filters
+
         return prevProjects.filter((project) => {
           const techFilterCondition =
             techFilters.includes("all") || techFilters.length === 0
@@ -144,7 +139,6 @@ const Work = () => {
     });
   }, [techFilters, sizeFilters]);
 
-  //////////////////////////////////// FUNCTIONS ///////////////////////////////////////////////
   const imageClick = (image) => {
     setShowImageModal(true);
     setCurrentImage(image);
@@ -153,16 +147,16 @@ const Work = () => {
   const moveForward = (index) => {
     if (imageContainerRef.current !== null) {
       initialProjects.length == index
-        ? imageContainerRef.current.swiper.slideTo(0) // if current slide is last then move to first slide
-        : imageContainerRef.current.swiper.slideTo(index); // move to next slide
+        ? imageContainerRef.current.swiper.slideTo(0) 
+        : imageContainerRef.current.swiper.slideTo(index); 
     }
   };
 
   const moveBack = (index) => {
     if (imageContainerRef.current !== null) {
       index < 0
-        ? imageContainerRef.current.swiper.slideTo(initialProjects.length) // if current slide is first then move to lasat slide
-        : imageContainerRef.current.swiper.slideTo(index); // move to previous slide
+        ? imageContainerRef.current.swiper.slideTo(initialProjects.length) 
+        : imageContainerRef.current.swiper.slideTo(index);
     }
   };
 
@@ -189,7 +183,6 @@ const Work = () => {
     }
   };
 
-  //////////////////////////////////// COMPONENTS ///////////////////////////////////////////////
   const Project = ({ project, tiltRef, index }) => {
     useEffect(() => {
       if (tiltRef.current) {
@@ -436,49 +429,6 @@ const Work = () => {
 
 export default Work;
 
-// <div className=" relative pt-[8rem] z-10 lg:hidden md:hidden sm:flex sm:flex-col sm:p-[2rem] flex flex-col p-[16px] " >
-//     {
-//         projects.map((image, index) => (
-//             <div key={index} className="relative " onClick={() => { setShowImageModal(true); setCurrentImage(image) }} onMouseEnter={() => setShowImageDetail(image.index)} onMouseLeave={() => setShowImageDetail(null)} >
-
-//                 {
-//                     showImageDetail == image.index &&
-//                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: [0, .8] }} transition={{ duration: 1 }} className=" absolute h-full w-full z-[10] bg-lightGray  " >
-//                         <div className="relative flex flex-col justify-between items-start p-[1rem] w-full h-full " >
-//                             <AddTwoTone className="absolute top-[50%] right-[50%] transform translate-x-[-50%] translate-y-[-50%] " />
-
-//                             <motion.span
-//                                 animate={{ y: [-10, 0] }}
-//                                 transition={{ duration: 1 }}
-//                                 className="p-[4px] rounded-full "
-//                             >
-//                                 <Link />
-//                             </motion.span>
-
-//                             <motion.div animate={{ y: [10, 0] }} transition={{ duration: 1 }} className="flex flex-col justify-start " >
-//                                 <h6 className="text-white text-[20px] uppercase " >{image.heading}</h6>
-//                                 <p className="text-textGray text-[16px] capitalize " >{image.subHeading}</p>
-//                             </motion.div>
-
-//                         </div>
-//                     </motion.div>
-//                 }
-
-//                 <div className="overflow-hidden w-full h-full " >
-//                     <motion.img
-//                         key={index}
-//                         whileInView={{ y: [0, 1], opacity: [0, 1] }}
-//                         whileHover={{ scale: [1, 1] }}
-//                         transition={{ duration: 0.3 }}
-//                         src={image2}
-//                         alt={`image${index + 1}`}
-//                         className="bg-gray w-full h-full "
-//                     />
-//                 </div>
-//             </div>
-//         ))
-//     }
-// </div>
 
 const initialProjects = [
   {

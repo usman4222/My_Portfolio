@@ -82,10 +82,10 @@ const links = [
         title: 'Home',
         link: 'home'
     },
-    {
-        title: 'About',
-        link: 'about'
-    },
+    // {
+    //     title: 'About',
+    //     link: 'about'
+    // },
     {
         title: 'Services',
         link: 'services'
@@ -94,10 +94,10 @@ const links = [
         title: 'Work',
         link: 'work'
     },
-    {
-        title: 'Clients',
-        link: 'clients'
-    },
+    // {
+    //     title: 'Clients',
+    //     link: 'clients'
+    // },
     {
         title: 'Contact',
         link: 'contact'

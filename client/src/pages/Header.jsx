@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import { Facebook, Twitter, Instagram, KeyboardArrowDown } from '@mui/icons-material';
 import { getRandomNumber } from '../utils/functions';
 import {
     FaHtml5,
@@ -53,7 +52,6 @@ const Header = () => {
         key: getRandomNumber(0, 10),
     }));
 
-    ///////////////////////////////////// STATE ///////////////////////////////////////////
     const [bubbles, setBubbles] = useState(initialBubbles);
     const [shadowComponent, setShadowComponent] = useState('Develop');
 
@@ -85,7 +83,6 @@ const Header = () => {
         </span>
     )
 
-    ///////////////////////////////////// USE EFFECT ///////////////////////////////////////////
     useEffect(() => {
         const components = ['Design', 'Code', 'Develop'];
         let currentIndex = 0;
@@ -95,7 +92,6 @@ const Header = () => {
             currentIndex = (currentIndex + 1) % components.length;
         }, 5000);
 
-        // Clean up the interval on component unmount
         return () => clearInterval(intervalId);
     }, []);
 
@@ -133,15 +129,6 @@ const Header = () => {
                                         {showCloud && (
                                             <div className="flex flex-col justify-center z-[1001] min-w-[4rem] ">
                                                 <h5 className='text-2xl capitalize ' >{icon.heading}</h5>
-                                                {/* <div className="w-full flex justify-end items-center ">
-                                                    <button
-                                                        style={{ '--color': icon.color == '#fff' ? '#000' : '#fff', '--bg': icon.color }}
-                                                        className={`cloud-button mt-1 px-4 py-2 rounded-md transition-all duration-300 focus:outline-none`}
-                                                        onClick={() => handleHideColor(index)}
-                                                    >
-                                                        View
-                                                    </button>
-                                                </div> */}
                                             </div>
                                         )}
                                     </motion.span>
@@ -180,21 +167,7 @@ const Header = () => {
                     <div className="col-span-1"></div>
                 </div>
 
-                {/* bottom left scroll down text button + vertical line */}
                 <div className="z-[2] fixed bottom-0 flex justify-between cursor-pointer md:gap-[2rem] md:right-[3rem] sm:gap-[2rem] sm:right-[3rem] gap-[1rem] right-[2rem] " >
-                    {/* <Link
-                        id="link"
-                        to='about'
-                        activeClass="active"
-                        smooth={true}
-                        spy={true}
-                        offset={-100}
-                        duration={1000}
-                        className="flex justify-center items-start md:gap-[8px] sm:gap-[8px] gap-0 "
-                    >
-                        <KeyboardArrowDown className="text-green " />
-                        <p className="capitalize text-white " >scroll down</p>
-                    </Link> */}
                     <hr className="h-[7rem] w-[4px] bg-green " />
                 </div>
 

@@ -7,10 +7,8 @@ import { useEffect, useRef } from "react";
 
 const Services = () => {
 
-    //////////////////////////////////////// VARIABLES //////////////////////////////////////////////
     const sectionRef = useRef()
 
-    //////////////////////////////////////// USE EFFECT //////////////////////////////////////////////
     useEffect(() => {
         const updateHeight = () => {
             const heightInVh = (sectionRef.current.offsetHeight / window.innerHeight) * 100;

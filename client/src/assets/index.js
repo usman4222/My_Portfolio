@@ -21,4 +21,4 @@ export { default as huzaifa } from "./huzaifa.png"
 export { default as muneeb } from "./muneeb.png"
 
 export { default as empty } from "./empty.png"
-export { default as code } from "./code.jpeg"
+export { default as code } from "./code.png"

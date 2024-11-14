@@ -8,15 +8,9 @@ import { profile } from '../assets';
 
 const About = () => {
 
-    ////////////////////////////////////////////////// VARIABLES ///////////////////////////////////////////////
     const sectionRef = useRef()
     const { scrollYProgress, scrollY } = useScroll({ container: sectionRef });
 
-    ////////////////////////////////////////////////// STATES ///////////////////////////////////////////////
-
-
-
-    ////////////////////////////////////////////////// USE EFFECTS ///////////////////////////////////////////////
     useEffect(() => {
         const updateHeight = () => {
             const heightInVh = (sectionRef.current.offsetHeight / window.innerHeight) * 100;
@@ -72,9 +66,6 @@ const About = () => {
                 <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center ' >Best regards</p>
                 <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center ' >Rana Usman</p>
             </motion.div>
-
-
-
         </section>
     )
 }
@@ -104,30 +95,3 @@ const aboutCardsArr = [
         hr: false
     },
 ]
-// {/* about cards */}
-// <motion.div
-//     whileInView={{ y: [0, 1], opacity: [0, 1] }}
-//     transition={{ duration: 1 }}
-//     className="flex justify-around items-start flex-wrap md:gap-[1rem] sm:gap-[1.5rem] gap-[2rem] md:px-[64px] sm:px-[2rem] px-[1rem] "
-// >
-
-
-//     {
-//         aboutCardsArr.map((aboutCard, index) => (
-//             <div className="min-w-[185px] flex justify-between items-start gap-[2rem] " key={index} >
-//                 <div className="flex flex-col justify-center items-center " >
-//                     <VisibilitySensor>
-//                         {({ isVisible }) =>
-//                             <h2 className="capitalize font-bold text-center md:text-[84px] sm:text-[72px] text-[64px] ">
-//                                 {isVisible ? <CountUp end={aboutCard.number} duration={2} /> : aboutCard.number}
-//                             </h2>
-//                         }
-//                     </VisibilitySensor>
-//                     <h4 className="capitalize text-[24px] text-black font-semibold  text-center " >{aboutCard.name}</h4>
-//                 </div>
-//                 {/* {aboutCard.hr && <hr className="sm:hidden lg:inline-block h-[6rem] w-[2px] bg-white " />} */}
-//             </div>
-//         ))
-//     }
-
-// </motion.div>

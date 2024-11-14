@@ -13,9 +13,7 @@ body {
 
 ::selection {
   background-color: #00B753;
-  /* Choose your desired background color */
   color: #fff;
-  /* Choose the text color for selected text */
 }
 
 
@@ -61,7 +59,6 @@ body {
 }
 
 
-/* removing pagination dots of swiper */
 .swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets .swiper-pagination-horizontal {
   diplay: none;
 }

@@ -1,1 +1,1 @@
-export const BACKEND_BASE_URL = "http://localhost:5005";
+export const BACKEND_BASE_URL = "https://my-portfolio-2186.vercel.app/";

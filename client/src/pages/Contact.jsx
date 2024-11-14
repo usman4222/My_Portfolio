@@ -9,11 +9,10 @@ import axios from "axios";
 import { BACKEND_BASE_URL } from "../constant";
 
 const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
-  /////////////////////////////////////// VARIABLES /////////////////////////////////////////////
+
   const initialState = { name: "", email: "", message: "", subject: "" };
   const sectionRef = useRef();
 
-  /////////////////////////////////////// STATES /////////////////////////////////////////////
   const [contactData, setContactData] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const [validationMessage, setValidationMessage] = useState(initialState);
@@ -23,7 +22,6 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
     validationMessage.message == "" &&
     validationMessage.subject == "";
 
-  //////////////////////////////////////// USE EFFECT //////////////////////////////////////////////
   useEffect(() => {
     const updateHeight = () => {
       const heightInVh =
@@ -37,7 +35,7 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
       window.removeEventListener("scroll", updateHeight);
     };
   }, []);
-  /////////////////////////////////////// FUNCTIONS /////////////////////////////////////////////
+
   const handleChange = (e) => {
     setContactData({ ...contactData, [e.target.name]: e.target.value });
   };
@@ -365,36 +363,25 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
                 <div className="flex justify-start gap-x-2">
                   <LinkedIn className="text-[1.5rem] " />
                   <Link
-                    to={"https://www.linkedin.com/in/naumanch/"}
+                    to={"https://www.linkedin.com/in/rana-usman4243/"}
                     className="hover:text-green "
                   >
-                    linkedin.com/in/rana-usman4243/
+                    Linked In
                   </Link>
                 </div>
                 <div className="flex justify-start gap-x-2 mt-4 ">
                   <GitHub className="text-[1.5rem] " />
                   <Link
-                    to={"https://github.com/naumanch969"}
+                    to={"https://github.com/usman4222"}
                     className="hover:text-green  "
                   >
-                    https://github.com/usman4222
+                    Github
                   </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* my location map */}
-        {/* <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54260.53212651819!2d74.22302447263971!3d31.790029314126155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391920dc82e30d5f%3A0x62b19b72f991085e!2sMuridke%2C%20Sheikhupura%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1675565540893!5m2!1sen!2s"
-                    width="600"
-                    height="450"
-                    style={{border:0}}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                /> */}
       </motion.div>
     </section>
   );
