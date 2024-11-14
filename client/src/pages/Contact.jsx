@@ -44,6 +44,15 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!contactData.name || !contactData.email || !contactData.message || !contactData.subject) {
+      setValidationMessage({
+        ...validationMessage,
+        subject: "All fields are required.",
+      });
+      return;
+    }
+
     try {
       setLoading(true);
       const { data } = await axios.post(
@@ -147,7 +156,7 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
 
       <Heading
         subHeading="Contact"
-        heading="Reach out for a new project or just say hello"
+        heading="Got an Idea? Contact me to collaborate or just drop a hello!"
         subHeadingColor="green"
         headingColor="white"
       />
@@ -306,9 +315,8 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
               onClick={handleSubmit}
               type="submit"
               disabled={!validated}
-              className={`w-full bg-green text-white p-[1rem] ${
-                validated ? "cursor-pointer" : ""
-              } `}
+              className={`w-full bg-green text-white p-[1rem] ${validated ? "cursor-pointer" : ""
+                } `}
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
@@ -329,7 +337,7 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
                   where to find
                 </h5>
                 <p className="flex flex-col gap-[8px] ">
-                  <span className="">H12 Islamabad</span>
+                  <span className="">Sargodha</span>
                   <span className="">Pakistan</span>
                 </p>
               </div>
@@ -339,14 +347,14 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
                   email at
                 </h5>
                 <p className="flex flex-col gap-[8px] ">
-                  <span className="">naumanch969@gmail.com</span>
+                  <span className="">usman4243ch@gmail.com</span>
                 </p>
               </div>
               {/* phone */}
               <div className="flex flex-col gap-[1rem] ">
                 <h5 className="text-green text-[24px] capitalize  ">call at</h5>
                 <p className="flex flex-col gap-[8px] ">
-                  <span className="">Phone: (+92) 305 5712534</span>
+                  <span className="">Phone: (+92) 307 0590928</span>
                 </p>
               </div>
             </div>
@@ -360,16 +368,16 @@ const Contact = ({ setOpenOTPModal, setOtpFormType }) => {
                     to={"https://www.linkedin.com/in/naumanch/"}
                     className="hover:text-green "
                   >
-                    linkedin.com/in/naumanch
+                    linkedin.com/in/rana-usman4243/
                   </Link>
                 </div>
                 <div className="flex justify-start gap-x-2 mt-4 ">
                   <GitHub className="text-[1.5rem] " />
                   <Link
                     to={"https://github.com/naumanch969"}
-                    className="hover:text-green "
+                    className="hover:text-green  "
                   >
-                    github.com/naumanch969
+                    https://github.com/usman4222
                   </Link>
                 </div>
               </div>

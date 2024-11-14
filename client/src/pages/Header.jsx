@@ -154,7 +154,7 @@ const Header = () => {
                 {/* logo */}
                 <div className="fixed bg-transparent flex justify-between mt-0 z-[2] " >
                     <div className="flex items-end justify-center " >
-                        <h4 className="text-[40px] text-semibold " >Glint<span className="w-[10px] h-[10px] inline-flex ml-[4px] rounded-full bg-green " /></h4>
+                        <h4 className="text-[40px] text-semibold " >Mr. Dev<span className="w-[10px] h-[10px] inline-flex ml-[4px] rounded-full bg-green " /></h4>
                     </div>
                 </div>
 
@@ -166,14 +166,14 @@ const Header = () => {
                             <h2 className="font-[cursive] flex flex-col gap-2 relative md:right-12 md:top-0 left-[-6rem] top-[16rem] transform -rotate-90 whitespace-nowrap text-stone-300 text-[26px] ">
                                 <span><span className='text-green ' >MERN</span> Stack Developer</span>
                                 <span>Frontend <span className='text-green ' >Developer`</span></span>
-                                <span>Based in Islamabad</span>
+                                <span>Based in Sargodha</span>
                             </h2>
                         </div>
                         <div className="flex flex-col justify-center items-start w-fit h-full z-[1] pr-[5rem] lg:relative absolute md:right-0  ">
                             <div className="absolute top-12 right-[35%] "><Ring size='lg' /></div>
                             <h2 className='lg:text-[9rem] md:text-[7.5rem] sm:text-[6rem] text-[2rem] font-bold md:h-[10rem] sm:h-[8rem] h-[2rem] relative' >Hello <div className='absolute bottom-0 md:right-[-2.5rem] sm:right-[-1.5rem] right-[-1rem] lg:w-7 lg:h-7 md:w-6 md:h-6 sm:h-5 sm:w-5 h-3 w-3 bg-green rounded-full' /></h2>
                             <h1 className='lg:text-[9rem] md:text-[7.5rem] sm:text-[6rem] text-[5rem] font-bold md:h-[10rem] sm:h-[8rem] h-[6rem] ' >I am </h1>
-                            <h1 className='lg:text-[9rem] md:text-[7.5rem] sm:text-[6rem] text-[5rem] font-bold md:h-[10rem] sm:h-[8rem] h-[6rem] ' >Nauman</h1>
+                            <h1 className='lg:text-[9rem] md:text-[7.5rem] sm:text-[6rem] text-[5rem] font-bold md:h-[10rem] sm:h-[8rem] h-[6rem] ' >Usman</h1>
                             <div className="absolute bottom-4 "><Ring size='sm' /></div>
                         </div>
                     </div>

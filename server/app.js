@@ -11,6 +11,7 @@ const app = express();
 const router = express.Router();
 const CONNECTION_URL = process.env.ATLAS_URL;
 
+
 app.use(express.json());
 app.use(cors());
 

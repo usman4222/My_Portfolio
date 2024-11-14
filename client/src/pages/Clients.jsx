@@ -77,8 +77,8 @@ const Clients = () => {
       {/* clients icon */}
       <div className="w-full flex flex-col justify-between items-center gap-[4rem] ">
         <Heading
-          subHeading="our clients"
-          heading="What they are saying about Glint"
+          subHeading="Client Feedback"
+          heading="What People Are Saying About My Work"
           subHeadingColor="green"
           headingColor="black"
         /> 

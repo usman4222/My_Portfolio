@@ -34,7 +34,7 @@ const Services = () => {
         "        >
 
 
-            <Heading subHeading='what we do' heading='We’ve got everything you need to launch and grow your business' subHeadingColor='green' headingColor='black' />
+            <Heading subHeading='What I Offer' heading='Everything You Need to Start and Grow Your Business is Here!' subHeadingColor='green' headingColor='black' />
 
             {/* all services cards */}
             <div className="w-full pt-[5rem] flex flex-wrap xl:px-[4rem] lg:px-0 md:px-0 sm:px-0  "            >
@@ -58,21 +58,21 @@ const servicesArr = [
     {
         icon: FormatPaint,
         title: 'MERN Stack',
-        text: 'Experience the synergy of MERN Stack Development with our expertise. From MongoDB\'s flexibility to Express.js\' streamlined backend, React\'s interactive frontend, and Node.js\' scalable runtime – we weave a seamless, full-stack narrative. Elevate your project with a technology stack that harmonizes innovation and efficiency.'
+        text: 'Discover the power of MERN Stack Development through my expertise. With MongoDB\'s flexibility, Express.js\' efficient backend, React\'s engaging frontend, and Node.js\' scalable environment, I create a cohesive full-stack solution. Enhance your project with a technology stack that balances innovation and effectiveness.'
     },
     {
         icon: FormatPaint,
         title: 'Web Design',
-        text: 'Discover the artistry of web design where seamless user experiences meet captivating aesthetics. Our designs are not just pixels on a screen; they\'re pathways to engagement and visual storytelling. Step into a digital realm where every click unveils a journey of innovation and creativity.'
+        text: 'Explore the beauty of web design, where smooth user experiences blend with stunning visuals. My designs are more than just pixels; they are gateways to engagement and visual narratives. Enter a digital world where every click reveals a journey of creativity and innovation.'
     },
     {
         icon: Inbox,
         title: 'Frontend Development',
-        text: 'Embark on a journey of Frontend Development excellence with us. We sculpt dynamic and responsive user interfaces, marrying form with function. From pixel-perfect designs to seamless interactions, we code experiences that captivate and interfaces that resonate. Join us at the forefront of web innovation.'
+        text: 'Embark on a journey of Frontend Development excellence with me. I craft dynamic and responsive user interfaces that blend form with function. From pixel-perfect designs to seamless interactions, I create experiences that captivate and interfaces that resonate. Join me at the forefront of web innovation.'
     },
     {
         icon: Campaign,
         title: 'Backend Development',
-        text: 'Dive into the robust world of Backend Development with us. Behind every seamless user experience lies a powerful and scalable backend architecture. We engineer data-driven solutions, ensuring your platform operates with efficiency and security. Let us shape the backbone of your digital ambitions, where innovation meets reliability.'
+        text: 'Explore the strong world of Backend Development with me. Every smooth user experience relies on a powerful and scalable backend. I create data-driven solutions to make sure your platform runs efficiently and securely. Let me help build the foundation of your digital goals, where innovation and reliability come together.'
     }, 
 ]

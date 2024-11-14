@@ -14,6 +14,7 @@ import { useScroll, useSpring, motion } from "framer-motion";
 import { useRef } from "react";
 import { useState } from "react";
 import { Link } from "react-scroll";
+import CodeDay from "./pages/CodeDay";
 
 const App = () => {
   ///////////////////////////////////////////// VARIABLES //////////////////////////////////////////////////
@@ -135,10 +136,11 @@ const App = () => {
 
       <Navbar showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
       <Header />
-      <About />
+      {/* <About /> */}
       <Services />
+      <CodeDay/>
       <Work />
-      <Clients />
+      {/* <Clients /> */}
       <Contact
         setOpenOTPModal={setOpenOTPModal}
         setOtpFormType={setOtpFormType}

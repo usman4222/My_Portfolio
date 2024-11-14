@@ -9,7 +9,8 @@ import { BACKEND_BASE_URL } from "../constant";
 const Footer = ({ setOpenOTPModal, setOtpFormType }) => {
   //////////////////////////////////////// VARIABLES //////////////////////////////////////////////
   const sectionRef = useRef();
-
+  const initialState = { email: "",};
+  const [validationMessage, setValidationMessage] = useState(initialState);
   //////////////////////////////////////// STATES //////////////////////////////////////////////
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
@@ -34,6 +35,14 @@ const Footer = ({ setOpenOTPModal, setOtpFormType }) => {
     setEmail(e.target.value);
   };
   const handleSubscribe = async () => {
+
+    if (email == "") {
+      setValidationMessage({
+        ...validationMessage,
+        subject: "Please Enter Email.",
+      });
+      return
+    }
     try {
       setLoading(true);
       const { data } = await axios.post(`${BACKEND_BASE_URL}/subscribe`, {
@@ -71,14 +80,11 @@ const Footer = ({ setOpenOTPModal, setOtpFormType }) => {
         {/* left footer content */}
         <div className="flex flex-col lg:w-[50%] md:w-full lg:gap-8 md:gap-4 sm:w-full sm:gap-8 w-full gap-0 ">
           <h4 className="text-[40px] font-semibold ">
-            Glint
+            Mr. Dev
             <span className="w-[10px] h-[10px] inline-flex ml-[4px] rounded-full bg-green " />
           </h4>
           <p className=" text-textGray md:text-[20px] sm:text-[20px] text-[16px]  ">
-            Dive into the art of digital craftsmanship. Elevate your online
-            presence with meticulously designed web applications and RESTful
-            APIs. Explore the possibilities of seamless and innovative
-            solutions.
+            Boost your online presence with expertly designed web applications. Experience the power of smooth and modern digital solutions.
           </p>
         </div>
 
@@ -90,9 +96,7 @@ const Footer = ({ setOpenOTPModal, setOtpFormType }) => {
             className="flex flex-col justify-start lg:items-start md:items-center gap-8 "
           >
             <p className=" text-textGray md:text-[20px] sm:text-[20px] text-[16px] ">
-              Stay in the loop with the latest tech trends. Subscribe to our
-              newsletter for exclusive insights, updates, and innovative
-              solutions delivered directly to your inbox.
+              Stay updated on the latest in tech! Subscribe to our newsletter for unique insights, updates, and creative solutions sent straight to your inbox.
             </p>
 
             {/* subscribe button */}
@@ -149,9 +153,7 @@ const Footer = ({ setOpenOTPModal, setOtpFormType }) => {
           ))}
         </div>
         <div className="flex items-center md:flex-row md:gap-[1rem] sm:flex-row sm:gap-[1rem] flex-col gap-[4px] ">
-          <p className="">© Copyright Glint 2022</p>
-          <hr className="h-[16px] w-[2px] bg-white " />
-          <p className="">Product of Softech</p>
+          <p className="">Product of Mr. Dev</p>
         </div>
       </div>
     </footer>

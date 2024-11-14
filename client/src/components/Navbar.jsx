@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link } from "react-scroll"
 import { Link as RouterLink } from 'react-router-dom'
 import { motion } from "framer-motion"
-import { Close } from '@mui/icons-material'
+import { Close, LinkedIn } from '@mui/icons-material'
 import { Facebook, Instagram, Twitter, GitHub } from "@mui/icons-material"
 
 const Navbar = ({ showNavbar, setShowNavbar }) => {
@@ -57,11 +57,11 @@ const Navbar = ({ showNavbar, setShowNavbar }) => {
                     </div>
 
                     <div className="flex justify-between " >
-                        <RouterLink to={'https://www.facebook.com/profile.php?id=100072770904288'} className="p-[4px] rounded-full flex justify-center items-center " ><Facebook className="text-[1.5rem] " /></RouterLink>
-                        <RouterLink to={'https://www.instagram.com/naumanch969/'} className="p-[4px] rounded-full flex justify-center items-center " ><Twitter className="text-[1.5rem] " /></RouterLink>
-                        <RouterLink to={'https://www.linkedin.com/in/nauman-ch-a68668256/'} className="p-[4px] rounded-full flex justify-center items-center " ><Instagram className="text-[1.5rem] " /></RouterLink>
-                        <RouterLink to={'https://github.com/naumanch969'} className="p-[4px] rounded-full flex justify-center items-center " ><GitHub className="text-[1.5rem] " /></RouterLink>
-                        <RouterLink to={'https://twitter.com/Naumanch969'} className="p-[4px] rounded-full flex justify-center items-center " ><Twitter className="text-[1.5rem] " /></RouterLink>
+                        <RouterLink to={'https://linkedin.com/in/rana-usman4243/'} className="p-[4px] rounded-full flex justify-center items-center " ><LinkedIn className="text-[1.5rem] " /></RouterLink>
+                        {/* <RouterLink to={'https://www.instagram.com/naumanch969/'} className="p-[4px] rounded-full flex justify-center items-center " ><Twitter className="text-[1.5rem] " /></RouterLink> */}
+                        <RouterLink to={'https://instagram.com/codexwhiz/'} className="p-[4px] rounded-full flex justify-center items-center " ><Instagram className="text-[1.5rem] " /></RouterLink>
+                        <RouterLink to={'https://github.com/usman4222'} className="p-[4px] rounded-full flex justify-center items-center " ><GitHub className="text-[1.5rem] " /></RouterLink>
+                        {/* <RouterLink to={'https://twitter.com/Naumanch969'} className="p-[4px] rounded-full flex justify-center items-center " ><Twitter className="text-[1.5rem] " /></RouterLink> */}
                     </div>
 
                 </motion.nav>

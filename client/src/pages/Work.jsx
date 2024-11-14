@@ -5,16 +5,14 @@ import { Chip, IconButton, Modal, Tooltip } from "@mui/material";
 import { Heading } from "../components";
 import {
   empty,
-  crm,
-  banklandingpage,
-  deziskin,
-  doctorguide,
-  musify,
-  ncexercises,
-  portfolio,
-  shoppy,
-  swiftcartDashboard,
-  swiftcartStore,
+  p1,
+  p2,
+  p3,
+  p4,
+  p5,
+  p6,
+  p7,
+  p8
 } from "../assets";
 import {
   Close,
@@ -116,7 +114,7 @@ const Work = () => {
         };
       }
     });
-  }, []); 
+  }, []);
   useEffect(() => {
     setProjects((prevProjects) => {
       if (
@@ -264,7 +262,7 @@ const Work = () => {
 
       <Heading
         subHeading="recent work"
-        heading="We love what we do, check out some of our latest works"
+        heading="Take a look at some of my latest projects!"
         subHeadingColor="black"
         headingColor="white"
       />
@@ -276,11 +274,10 @@ const Work = () => {
               <button
                 onClick={() => handleFilter("tech", tech.value)}
                 key={index}
-                className={`${
-                  techFilters.includes(tech.value)
+                className={`${techFilters.includes(tech.value)
                     ? "bg-white text-black"
                     : "bg-black text-white hover:bg-white hover:text-black"
-                } border border-white rounded-full px-4 py-1 z-50 transition-colors `}
+                  } border border-white rounded-full px-4 py-1 z-50 transition-colors `}
               >
                 {tech.label}
               </button>
@@ -291,11 +288,10 @@ const Work = () => {
               <button
                 onClick={() => handleFilter("size", size.value)}
                 key={index}
-                className={`${
-                  sizeFilters.includes(size.value)
+                className={`${sizeFilters.includes(size.value)
                     ? "bg-white text-black"
                     : "bg-black text-white hover:bg-white hover:text-black transition-all"
-                } border border-white rounded-full px-4 py-1 z-50 transition-colors `}
+                  } border border-white rounded-full px-4 py-1 z-50 transition-colors `}
               >
                 {size.label}
               </button>
@@ -347,9 +343,8 @@ const Work = () => {
         className=" flex justify-center items-center "
       >
         <div
-          className={`relative flex flex-col justify-between md:gap-0 md:pb-0 sm:gap-[1rem] gap-[3rem] p-[1rem] bg-lightGray ${
-            fullScreen ? "w-[100%] h-[100%]" : "w-[80%] h-[80%]"
-          } `}
+          className={`relative flex flex-col justify-between md:gap-0 md:pb-0 sm:gap-[1rem] gap-[3rem] p-[1rem] bg-lightGray ${fullScreen ? "w-[100%] h-[100%]" : "w-[80%] h-[80%]"
+            } `}
         >
           {/* top bar - icons */}
           <div className="flex justify-between px-[1rem] pb-[8px]  ">
@@ -398,11 +393,10 @@ const Work = () => {
                   <div className=" flex justify-center items-center md:h-fit sm:h-fit h-full ">
                     <img
                       src={project.image}
-                      className={`${
-                        fullScreen
+                      className={`${fullScreen
                           ? " md:h-[25rem] sm:h-[20rem] h-full "
                           : "md:h-[20rem] sm:h-[16rem] h-full "
-                      } w-auto `}
+                        } w-auto `}
                     />
                   </div>
                   <button onClick={() => moveForward(currentSlideIndex + 1)}>
@@ -489,13 +483,13 @@ export default Work;
 const initialProjects = [
   {
     index: 0,
-    createdAt: "2023",
-    image: crm,
-    src: "https://growmarketing.netlify.app",
-    heading: "CRM",
-    subHeading: "Customer Relation Management System for Real Estate Agency",
+    createdAt: "2024",
+    image: p1,
+    src: "https://apps.coinmath.org",
+    heading: "Coin Math",
+    subHeading: "Mining App",
     detail:
-      "As a CRM Architect & Technical Manager, I specialize in crafting robust Customer Relationship Management (CRM) solutions using the MERN stack. Currently overseeing the entire development process, I am actively involved in resolving any technical challenges that arise, ensuring the seamless functionality and optimal performance of the CRM system. My role encompasses end-to-end responsibility, from initial architecture design to ongoing technical issue resolution, contributing to the success of the CRM project.",
+      " I developed CoinMath, a mining app using React, Tailwind, and Firebase. It offers a simple way for users to grow digital assets with a user-friendly interface and secure OTP email verification. Users can create profiles, generate referral codes, and boost mining rates with more referrals. The app runs on a 24-hour mining cycle, rewarding users daily, and includes a blog for community engagement. An admin panel ensures easy content and user management. With over 30,000 active users, CoinMath highlights my ability to build scalable digital solutions.",
     size: "large",
     technologies: [
       "mern",
@@ -509,67 +503,67 @@ const initialProjects = [
   {
     index: 1,
     createdAt: "2024",
-    image: swiftcartStore,
+    image: p2,
     src: "https://swiftcart-store.vercel.app/",
     heading: "SwiftCart Store",
     subHeading: "An ecommerce site",
     detail:
       "An ecommerce website built to provide a seamless shopping experience. It is designed with simplicity and functionality in mind, ensuring a smooth and enjoyable shopping journey for users. The key features includes cart funtionality, displaying multiple billboards and respective categories, related products, featured products, authentication, filters, payment method integration",
     size: "large",
-    technologies: ["next.js", "shadcnui", "tailwindcss", "prisma", "stripe"],
+    technologies: ["next.js", "shadcnui", "tailwindcss", ],
   },
   {
     index: 2,
     createdAt: "2024",
-    image: swiftcartDashboard,
-    src: "https://swiftcart-dashboard.vercel.app/",
-    heading: "SwiftCart Dashboard",
-    subHeading: "Dashboard application of SwiftCart (an ecommerce website)",
+    image: p3,
+    src: "https://9tailstechnologies.com",
+    heading: "9TailsTech",
+    subHeading: "Company Portfolio",
     detail:
-      "This Next.JS based dashboard is designed to simplify the management of multiple e-commerce platforms in one place. With features like billboards, categories, sizes, colors, products, orders, Stripe integration, and authentication powered by Clerk, Swiftcart Dashboard streamlines the online store management experience.",
+      "Welcome to my Company Portfolio, a frontend showcase built with React and Tailwind CSS. Explore our services, projects, team, and contact information in a visually appealing and intuitive format. Reach out to us for collaboration opportunities.",
     size: "large",
-    technologies: ["next.js", "shadcnui", "tailwindcss", "prisma", "stripe"],
+    technologies: ["next.js", "shadcnui", "tailwindcss",],
   },
   {
     index: 3,
-    createdAt: "2023",
-    image: doctorguide,
-    src: "https://doctorguide.ai",
-    heading: "guitaristic",
-    subHeading: "branding",
+    createdAt: "2024",
+    image: p4,
+    src: "https://enfotrix.com",
+    heading: "Enfotrix",
+    subHeading: "Tech Company",
     detail:
-      "As the lead Frontend Developer for a collaborative AI project, I spearheaded the creation of an intuitive user interface using React.js. With a focus on translating intricate AI functionalities into user-friendly designs, I am currently dedicated to refining and addressing frontend aspects. My role is centered on delivering a polished and visually compelling interface that seamlessly complements the advanced capabilities of our AI tool.",
+      "Enfotrix is a technology company dedicated to helping businesses thrive through innovative digital solutions. I designed and developed the Enfotrix website, focusing on creating a clean and user-friendly experience that aligns with the company’s modern approach. This project allowed me to showcase my skills in web design and development, emphasizing simplicity and functionality to best represent Enfotrix's mission and services.",
     size: "large",
-    technologies: ["react.js"],
+    technologies: ["next.js"],
   },
   {
     index: 4,
-    createdAt: "2023",
-    image: musify,
-    src: "https://musif.netlify.app",
-    heading: "Musif",
-    subHeading: "Musif",
+    createdAt: "2024",
+    image: p5,
+    src: "https://essenctia.com",
+    heading: "Essenctia",
+    subHeading: "Essence of innovation",
     detail:
-      "The Music Website utilizes third-party APIs to create an engaging platform for music enthusiasts. It offers trending music, top charts, and personalized recommendations, powered by popular music streaming APIs.",
+      "Essenctia is committed to creating outstanding flavor solutions that elevate our customers' products and brands. With a blend of expertise, creativity, and passion, we develop unique and memorable flavor experiences that captivate consumers and build brand loyalty. I designed and developed the Essenctia website, ensuring it reflects the brand’s dedication to quality and innovation. This project highlights my ability to create a visually appealing, intuitive site that effectively communicates Essenctia’s mission to deliver flavor solutions that stand out in the market.",
     size: "medium",
-    technologies: ["react.js", "thirdpartyapi"],
+    technologies: ["react.js"],
   },
   {
     index: 5,
     createdAt: "2023",
-    image: deziskin,
-    src: "https://deziskin.netlify.app",
-    heading: "Deziskin",
-    subHeading: "An ecommerce website of beauty products",
+    image: p6,
+    src: "https://sms-v2.vercel.app/",
+    heading: "Soriic(Email: soriic@gmail.com, Password: 123)",
+    subHeading: "An Employee and expense management system.",
     detail:
-      "Deziskin stands as a showcase in the e-commerce realm, a MERN stack-powered website dedicated to a singular, premium product. I spearheaded the end-to-end development, seamlessly integrating MongoDB, Express.js, React, and Node.js to deliver an immersive shopping experience. From intuitive user interfaces to robust backend functionalities, Deziskin embodies my expertise in crafting dynamic, full-stack solutions for smooth online retail",
+      "The Office Management System integrates robust attendance and financial management features with user authentication via JWT tokens. Built using the MERN stack (MongoDB, Express.js, React, Node.js), this system allows administrators to efficiently manage employee records, mark attendance, and access detailed reports upon verification. With secure access to revenue and expense data, it empowers informed decision-making. The JWT-based authentication fosters accountability and operational efficiency, ensuring only authorized users access sensitive information, thereby driving organizational success. This project demonstrates my expertise in full-stack development, emphasizing security, usability, and data-driven management.",
     size: "medium",
-    technologies: ["react.js", "stripe"],
+    technologies: ["react.js","node.js", "express.js", "mongodb"],
   },
   {
     index: 6,
     createdAt: "2023",
-    image: portfolio,
+    image: p7,
     src: "https://naumanch.netlify.app/",
     heading: "Portfolio Website",
     subHeading: "Portfolio Website",
@@ -580,38 +574,14 @@ const initialProjects = [
   },
   {
     index: 7,
-    createdAt: "2022",
-    image: shoppy,
-    src: "https://shopy-dashboard.netlify.app",
-    heading: "Shoppy Dashboard",
-    subHeading: "Dashboard application",
+    createdAt: "2023",
+    image: p8,
+    src: "https://book-store-app-six-mocha.vercel.app/",
+    heading: "Book Store",
+    subHeading: "Book Store App",
     detail:
-      "The Dashboard Application is a web platform for viewing business data. It shows key metrics like user stats, product info, revenue, and expenses in one place. It's user-friendly, offers real-time insights, and helps with decision-making.",
+      "This is a full-stack Book Store application built using the MERN stack (MongoDB, Express.js, React, Node.js). It allows users to browse, add, and manage their book collections with real-time data synchronization. I developed this app from scratch, implementing features such as book management, and a responsive front-end, demonstrating my skills in both front-end and back-end development.",
     size: "small",
     technologies: ["mern", "react.js", "express.js", "node.js", "mongodb"],
-  },
-  {
-    index: 8,
-    createdAt: "2022",
-    image: banklandingpage,
-    src: "https://ncbank-landing-page.netlify.app/",
-    heading: "Shoppy Dashboard",
-    subHeading: "Dashboard application",
-    detail:
-      "The Bank Landing Page is a user-friendly web interface offering easy access to essential banking services. It showcases account options, loans, credit cards, and investments.",
-    size: "small",
-    technologies: ["react.js", "express.js", "node.js", "mern", "mongodb"],
-  },
-  {
-    index: 9,
-    createdAt: "2022",
-    image: ncexercises,
-    src: "https://ncexercises.netlify.app/",
-    heading: "Exercises Web",
-    subHeading: "Dashboard application",
-    detail:
-      "Designed and developed with ReactJS, the Search-Based Exercise Website is a fitness app which integrates third-party services for exercise data, offering users a straightforward and effective place to search for exercises and access comprehensive information. Moreover it also provides the related equipments, exercises and youtube video recommendations of each respective drill.",
-    size: "small",
-    technologies: ["react.js", "express.js", "node.js", "mern", "mongodb"],
-  },
+  }
 ];

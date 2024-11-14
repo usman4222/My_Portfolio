@@ -55,7 +55,7 @@ const About = () => {
             >
                 <h5 className="uppercase text-black font-semibold tracking-[2px] md:text-[24px] sm:text-[22px] text-[20px] " >Hello There</h5>
                 <div className="w-fit flex flex-col md:items-end items-center md:gap-[3rem] sm:gap-[2rem] gap-[1rem] " >
-                    <h2 className="w-full capitalize md:text-end items-center font-bold tracking-[2px] md:text-[84px] sm:text-[64px] text-[38px] " >Glint is here</h2>
+                    <h2 className="w-full capitalize md:text-end items-center font-bold tracking-[2px] md:text-[84px] sm:text-[64px] text-[38px] " >Mr. Dev is here</h2>
                     {/* <hr className="bg-white md:w-[120%] sm:w-full w-full " /> */}
                 </div>
             </motion.div>
@@ -66,11 +66,11 @@ const About = () => {
                 transition={{ duration: 0.3 }}
                 className="xl:pl-[24rem] xl:pr-0"
             >
-                <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center lg:pl-[7rem] md:pl-[7rem] ' >I'm <span className='font-[cursive] font-bold text-[32px] gradient-text ' >Nauman Chaudhry</span>, a full stack developer having speciality in <span className='font-bold' >MERN</span> and <span className='font-bold' >Next.JS</span>, with a passion for crafting exceptional digital experiences. With over two years of dedicated experience, I've had the privilege of working on a diverse range of projects. These include comprehensive full-stack web applications and meticulously designed RESTful APIs, all powered by technologies like MongoDB, Express.js, React.js, and Node.js.</p>
+                <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center lg:pl-[7rem] md:pl-[7rem] ' >I'm <span className='font-[cursive] font-bold text-[32px] gradient-text ' >Rana Usman</span>, a full stack developer having speciality in <span className='font-bold' >MERN</span> and <span className='font-bold' >Next.JS</span>, with a passion for crafting exceptional digital experiences. With over two years of dedicated experience, I've had the privilege of working on a diverse range of projects. These include comprehensive full-stack web applications and meticulously designed RESTful APIs, all powered by technologies like MongoDB, Express.js, React.js, and Node.js.</p>
                 <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center lg:pl-[16rem] md:pl-[16rem] ' > My commitment to continuous learning keeps me at the forefront of industry trends. I thrive on exploring new horizons in technology and contributing to open-source projects. Being an active part of coding communities brings me joy and enriches my knowledge.</p>
                 <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center lg:pl-[26rem] md:pl-[18rem] ' >I sincerely appreciate your presence on my portfolio. Whether you have inquiries or a collaborative project in mind, please don't hesitate to reach out. Together, we can shape the future of the digital landscape.</p>
                 <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center ' >Best regards</p>
-                <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center ' >Nauman Chaudhry</p>
+                <p className='md:text-[24px] sm:text-[20px] text-white md:text-end text-center ' >Rana Usman</p>
             </motion.div>
 
 
