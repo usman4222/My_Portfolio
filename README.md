@@ -19,14 +19,14 @@ This is my personal portfolio website repo, which showcases my skills and projec
 
 ## Live Demo
 
-Check out the live demo of my personal portfolio website [here](https://nch.netlify.app).
+Check out the live demo of my personal portfolio website [here](https://my-portfolio-rust-theta-37.vercel.app/).
 
 ## Getting Started
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/naumanch969/glint.git
+git clone https://github.com/usman4222/My_Portfolio
 ```
 
 2. Install dependencies:
@@ -52,5 +52,5 @@ Contributions are welcome! If you have any suggestions, enhancements, or bug fix
 
 Have questions or feedback? Feel free to reach out to me:
 
-- Email: naumanch969@gmail.com
-- LinkedIn: [Nauman Ch](https://www.linkedin.com/in/naumanch/)
+- Email: usman4243ch@gmail.com
+- LinkedIn: [Rana Usman](https://www.linkedin.com/in/rana-usman42/)
