@@ -3,17 +3,7 @@ import { motion } from "framer-motion";
 import { Chip, IconButton, Modal, Tooltip } from "@mui/material";
 
 import { Heading } from "../components";
-import {
-  empty,
-  p1,
-  p2,
-  p3,
-  p4,
-  p5,
-  p6,
-  p7,
-  p8
-} from "../assets";
+import { empty, p1, p2, p3, p4, p5, p6, p7, p8, p9 } from "../assets";
 import {
   Close,
   Fullscreen,
@@ -116,12 +106,10 @@ const Work = () => {
         (techFilters.includes("all") || techFilters.length === 0) &&
         (sizeFilters.includes("all") || sizeFilters.length === 0)
       ) {
-
         techFilters.length === 0 && setTechFilters(["all"]);
         sizeFilters.length === 0 && setSizeFilters(["all"]);
         return initialProjects;
       } else {
-
         return prevProjects.filter((project) => {
           const techFilterCondition =
             techFilters.includes("all") || techFilters.length === 0
@@ -147,15 +135,15 @@ const Work = () => {
   const moveForward = (index) => {
     if (imageContainerRef.current !== null) {
       initialProjects.length == index
-        ? imageContainerRef.current.swiper.slideTo(0) 
-        : imageContainerRef.current.swiper.slideTo(index); 
+        ? imageContainerRef.current.swiper.slideTo(0)
+        : imageContainerRef.current.swiper.slideTo(index);
     }
   };
 
   const moveBack = (index) => {
     if (imageContainerRef.current !== null) {
       index < 0
-        ? imageContainerRef.current.swiper.slideTo(initialProjects.length) 
+        ? imageContainerRef.current.swiper.slideTo(initialProjects.length)
         : imageContainerRef.current.swiper.slideTo(index);
     }
   };
@@ -267,10 +255,11 @@ const Work = () => {
               <button
                 onClick={() => handleFilter("tech", tech.value)}
                 key={index}
-                className={`${techFilters.includes(tech.value)
+                className={`${
+                  techFilters.includes(tech.value)
                     ? "bg-white text-black"
                     : "bg-black text-white hover:bg-white hover:text-black"
-                  } border border-white rounded-full px-4 py-1 z-50 transition-colors `}
+                } border border-white rounded-full px-4 py-1 z-50 transition-colors `}
               >
                 {tech.label}
               </button>
@@ -281,10 +270,11 @@ const Work = () => {
               <button
                 onClick={() => handleFilter("size", size.value)}
                 key={index}
-                className={`${sizeFilters.includes(size.value)
+                className={`${
+                  sizeFilters.includes(size.value)
                     ? "bg-white text-black"
                     : "bg-black text-white hover:bg-white hover:text-black transition-all"
-                  } border border-white rounded-full px-4 py-1 z-50 transition-colors `}
+                } border border-white rounded-full px-4 py-1 z-50 transition-colors `}
               >
                 {size.label}
               </button>
@@ -336,8 +326,9 @@ const Work = () => {
         className=" flex justify-center items-center "
       >
         <div
-          className={`relative flex flex-col justify-between md:gap-0 md:pb-0 sm:gap-[1rem] gap-[3rem] p-[1rem] bg-lightGray ${fullScreen ? "w-[100%] h-[100%]" : "w-[80%] h-[80%]"
-            } `}
+          className={`relative flex flex-col justify-between md:gap-0 md:pb-0 sm:gap-[1rem] gap-[3rem] p-[1rem] bg-lightGray ${
+            fullScreen ? "w-[100%] h-[100%]" : "w-[80%] h-[80%]"
+          } `}
         >
           {/* top bar - icons */}
           <div className="flex justify-between px-[1rem] pb-[8px]  ">
@@ -386,10 +377,11 @@ const Work = () => {
                   <div className=" flex justify-center items-center md:h-fit sm:h-fit h-full ">
                     <img
                       src={project.image}
-                      className={`${fullScreen
+                      className={`${
+                        fullScreen
                           ? " md:h-[25rem] sm:h-[20rem] h-full "
                           : "md:h-[20rem] sm:h-[16rem] h-full "
-                        } w-auto `}
+                      } w-auto `}
                     />
                   </div>
                   <button onClick={() => moveForward(currentSlideIndex + 1)}>
@@ -429,7 +421,6 @@ const Work = () => {
 
 export default Work;
 
-
 const initialProjects = [
   {
     index: 0,
@@ -454,13 +445,13 @@ const initialProjects = [
     index: 1,
     createdAt: "2024",
     image: p2,
-    src: "https://swiftcart-store.vercel.app/",
-    heading: "SwiftCart Store",
-    subHeading: "An ecommerce site",
+    src: "https://github.com/usman4222/Mern-Blog",
+    heading: "Bloging App",
+    subHeading: "Posting App",
     detail:
-      "An ecommerce website built to provide a seamless shopping experience. It is designed with simplicity and functionality in mind, ensuring a smooth and enjoyable shopping journey for users. The key features includes cart funtionality, displaying multiple billboards and respective categories, related products, featured products, authentication, filters, payment method integration",
+      "This blogging platform empowers users to create and share engaging content, equipped with robust search functionality. A user-friendly admin dashboard facilitates content management, while seamless Google authentication and comment functionality enhance user interaction.",
     size: "large",
-    technologies: ["next.js", "shadcnui", "tailwindcss", ],
+    technologies: ["next.js", "shadcnui", "tailwindcss"],
   },
   {
     index: 2,
@@ -472,7 +463,7 @@ const initialProjects = [
     detail:
       "Welcome to my Company Portfolio, a frontend showcase built with React and Tailwind CSS. Explore our services, projects, team, and contact information in a visually appealing and intuitive format. Reach out to us for collaboration opportunities.",
     size: "large",
-    technologies: ["next.js", "shadcnui", "tailwindcss",],
+    technologies: ["next.js", "shadcnui", "tailwindcss"],
   },
   {
     index: 3,
@@ -508,18 +499,18 @@ const initialProjects = [
     detail:
       "The Office Management System integrates robust attendance and financial management features with user authentication via JWT tokens. Built using the MERN stack (MongoDB, Express.js, React, Node.js), this system allows administrators to efficiently manage employee records, mark attendance, and access detailed reports upon verification. With secure access to revenue and expense data, it empowers informed decision-making. The JWT-based authentication fosters accountability and operational efficiency, ensuring only authorized users access sensitive information, thereby driving organizational success. This project demonstrates my expertise in full-stack development, emphasizing security, usability, and data-driven management.",
     size: "medium",
-    technologies: ["react.js","node.js", "express.js", "mongodb"],
+    technologies: ["react.js", "node.js", "express.js", "mongodb"],
   },
   {
     index: 6,
-    createdAt: "2023",
+    createdAt: "2024",
     image: p7,
-    src: "https://naumanch.netlify.app/",
-    heading: "Portfolio Website",
-    subHeading: "Portfolio Website",
+    src: "https://github.com/usman4222/Chat_App",
+    heading: "Live Chat App",
+    subHeading: "Chatting App",
     detail:
-      "The Portfolio Website of a Full Stack Developer, built in React and Framer Motion, showcases the skills, testimonials and projects. With an intuitive interface and smooth animations, the website demonstrates the expertise in front-end and back-end technologies. Visitors can explore detailed project descriptions and examples of the work, making it an impressive representation of affective abilities to potential employers and clients",
-    size: "medium",
+      "This intuitive chat application enables real-time text communication, enhanced with the ability to share images, files, and expressive emojis. Seamless group chat functionality fosters collaborative conversations and strengthens connections.",
+    size: "large",
     technologies: ["mern", "react.js", "express.js", "node.js", "mongodb"],
   },
   {
@@ -533,5 +524,17 @@ const initialProjects = [
       "This is a full-stack Book Store application built using the MERN stack (MongoDB, Express.js, React, Node.js). It allows users to browse, add, and manage their book collections with real-time data synchronization. I developed this app from scratch, implementing features such as book management, and a responsive front-end, demonstrating my skills in both front-end and back-end development.",
     size: "small",
     technologies: ["mern", "react.js", "express.js", "node.js", "mongodb"],
-  }
+  },
+  {
+    index: 8,
+    createdAt: "2024",
+    image: p9,
+    src: "https://easy-buy-g2ec.vercel.app/",
+    heading: "Easy buy",
+    subHeading: "Online Shopping Website",
+    detail:
+      "Easy Buy is an online shopping platform featuring a diverse product catalog, advanced search filters (including price), secure Stripe payments, a streamlined order process with shipping information, and detailed invoice summaries. A comprehensive admin dashboard facilitates efficient product management and order handling.",
+    size: "large",
+    technologies: ["mern", "react.js", "express.js", "node.js", "mongodb"],
+  },
 ];

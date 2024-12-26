@@ -32,50 +32,6 @@ const App = () => {
   const cursorDotRef = useRef(null);
   const cursorOutlineRef = useRef(null);
 
-  ///////////////////////////////////////////// USE EFFECT //////////////////////////////////////////////////
-
-  // useEffect(() => {
-  //   window.addEventListener('mousemove', function (e) {
-  //     const posX = e.clientX;
-  //     const posY = e.clientY;
-
-  //     if (cursorDotRef.current && cursorOutlineRef.current) {
-  //       // Use type assertions here
-  //       cursorDotRef.current.style.left = posX + 'px';
-  //       cursorDotRef.current.style.top = posY + 'px';
-
-  //       cursorOutlineRef.current.style.left = posX + 'px';
-  //       cursorOutlineRef.current.style.top = posY + 'px';
-
-  //       // The animate method is not directly available on HTMLElement
-  //       // Use `animate` from the Animation API
-  //       cursorOutlineRef.current.animate(
-  //         [{ left: `${posX}px`, top: `${posY}px` }],
-  //         { duration: 1000, fill: 'forwards' }
-  //       );
-  //     }
-
-  //     return () => {
-  //       window.removeEventListener('mousemove', () => { });
-  //     };
-  //   });
-  // }, [])
-  // useEffect(() => {
-  //   if (sectionRef.current) {
-  //     VanillaTilt.init(sectionRef.current, {
-  //       max: 25,
-  //       speed: 400,
-  //       glare: true,
-  //       'max-glare': 0.5,
-  //     });
-
-  //     return () => {
-  //       sectionRef.current?.vanillaTilt?.destroy(); // Cleanup on component unmount
-  //     }
-  //   }
-  // }, []);
-
-  ///////////////////////////////////////////// FUNCTIONS //////////////////////////////////////////////////
   const handleScroll = () => {
     if (window.scrollY >= window.innerHeight + 2) {
       // if window scrolled to 200vh + 2px
