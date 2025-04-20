@@ -457,7 +457,7 @@ const initialProjects = [
     index: 2,
     createdAt: "2024",
     image: p3,
-    src: "https://9tailstechnologies.com",
+    src: "https://company-portfolio-ef5w.vercel.app/",
     heading: "9TailsTech",
     subHeading: "Company Portfolio",
     detail:
